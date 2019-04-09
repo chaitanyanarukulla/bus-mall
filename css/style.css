@@ -21,6 +21,7 @@ body{
     background-color: rgba(64, 0, 255,0.5);
       height: 320px;
       width: 300px;
+      margin: 10px;
     }
     #imgrool ul li {
       text-decoration: none;
