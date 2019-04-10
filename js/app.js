@@ -78,6 +78,7 @@ function handleClick(event) {
   if (totalClicks === 25) {
     productPic.removeEventListener('click', handleClick);
     wipe();
+    coolChart();
   } else {
     wipe();
     render();
@@ -86,3 +87,78 @@ function handleClick(event) {
 render();
 productPic.addEventListener('click', handleClick);
 
+// making chart ------------------------------------------------------------------------------------->
+function coolChart() {
+  var chartLabel = [];
+  var chartData = [];
+  for (var i = 0; i < allProducts.length; i++) {
+    chartData.push(allProducts[i].clicks);
+    chartLabel.push(allProducts[i].name);
+  }
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: chartLabel,
+      datasets: [{
+        label: 'Buss Mall - Products Clicked ',
+        data: chartData,
+        backgroundColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, .9)',
+          'rgba(255, 206, 88, .8)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, .9)',
+          'rgba(255, 159, 64, .8)',
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, .7)',
+          'rgba(255, 206, 88.8)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255,.9)',
+          'rgba(255, 159, 64,.8)',
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, .8)',
+          'rgba(255, 206, 88, .9)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, .9)',
+          'rgba(255, 159, 64, .8)',
+          'rgba(255, 99, 132,1)',
+          'rgba(54, 162, 235.9)',
+        ],
+        borderColor: [
+          'rgba(255,99,132,1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)',
+          'rgba(255,99,132,1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)',
+          'rgba(255,99,132,1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)',
+          'rgba(255,99,132,1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    }
+  });
+}
