@@ -29,6 +29,10 @@ The marketing team is not only interested in the total number of clicks, but als
 
 You are also responsible for the look and feel of the app, so don't forget a custom font, color palette, layout with semantic HTML, and so on.
 
-# User Stories
+#  Adding new User Stories (features)
  write your own user stories in user_stories.md
+
+ Your savvy marketing person has just informed you that just showing users the numbered data of the click percentages is not going to cut it. You need a visual representation to grab the user’s attention.
+
+ Marketing has gotten a lot of negative feedback from users who want to store their results, so that when they refresh the page, or even if they leave their browser and return later they can still see their data from before.
  

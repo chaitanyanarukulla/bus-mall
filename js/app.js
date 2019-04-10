@@ -5,26 +5,32 @@ var oldrender = [];
 var totalClicks = 0;
 var productPic = document.getElementById('imgrool');
 
-new Product('bag', 'img/bag.jpg');
-new Product('banana', 'img/banana.jpg');
-new Product('bathroom', 'img/bathroom.jpg');
-new Product('boots', 'img/boots.jpg');
-new Product('breakfast', 'img/breakfast.jpg');
-new Product('bubblegum', 'img/bubblegum.jpg');
-new Product('chair', 'img/chair.jpg');
-new Product('cthulhu', 'img/cthulhu.jpg');
-new Product('dog', 'img/dog-duck.jpg');
-new Product('dragon', 'img/dragon.jpg');
-new Product('pen', 'img/pen.jpg');
-new Product('pet', 'img/pet-sweep.jpg');
-new Product('scissors', 'img/scissors.jpg');
-new Product('shark', 'img/shark.jpg');
-new Product('sweep', 'img/sweep.png');
-new Product('tauntaum', 'img/tauntaun.jpg');
-new Product('unicorn', 'img/unicorn.jpg');
-new Product('usb', 'img/usb.jpg');
-new Product('water', 'img/water-can.jpg');
-new Product('wine', 'img/wine-glass.jpg');
+//Checking for local storage ------------------------------------------------------------------->
+if(localStorage.chai){
+  allProducts = JSON.parse(localStorage.chai);
+}
+else{
+  new Product('bag', 'img/bag.jpg');
+  new Product('banana', 'img/banana.jpg');
+  new Product('bathroom', 'img/bathroom.jpg');
+  new Product('boots', 'img/boots.jpg');
+  new Product('breakfast', 'img/breakfast.jpg');
+  new Product('bubblegum', 'img/bubblegum.jpg');
+  new Product('chair', 'img/chair.jpg');
+  new Product('cthulhu', 'img/cthulhu.jpg');
+  new Product('dog', 'img/dog-duck.jpg');
+  new Product('dragon', 'img/dragon.jpg');
+  new Product('pen', 'img/pen.jpg');
+  new Product('pet', 'img/pet-sweep.jpg');
+  new Product('scissors', 'img/scissors.jpg');
+  new Product('shark', 'img/shark.jpg');
+  new Product('sweep', 'img/sweep.png');
+  new Product('tauntaum', 'img/tauntaun.jpg');
+  new Product('unicorn', 'img/unicorn.jpg');
+  new Product('usb', 'img/usb.jpg');
+  new Product('water', 'img/water-can.jpg');
+  new Product('wine', 'img/wine-glass.jpg');
+}
 
 // Constructor Function to make Product  --------------------------------------------------->
 function Product(name, path) {
@@ -73,6 +79,7 @@ function handleClick(event) {
     if (event.target.id === newrender[i].name) {
       newrender[i].clicks++;
       totalClicks++;
+      localStorage.setItem('chai', JSON.stringify(allProducts));
     }
   }
   if (totalClicks === 25) {
