@@ -87,7 +87,8 @@ function handleClick(event) {
 render();
 productPic.addEventListener('click', handleClick);
 
-// making chart ------------------------------------------------------------------------------------->
+
+// making chart and putting it on DOM ------------------------------------------------------------------------------------->
 function coolChart() {
   var chartLabel = [];
   var chartData = [];
