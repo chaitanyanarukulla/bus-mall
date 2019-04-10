@@ -183,7 +183,7 @@ function coolChart2() {
     chartCon.push(allProducts[i].percent);
   }
 
-  var ctx = document.getElementById("myChart2").getContext('2d');
+  var ctx = document.getElementById('myChart2').getContext('2d');
   var myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
