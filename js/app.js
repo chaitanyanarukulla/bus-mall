@@ -60,6 +60,16 @@ function render() {
     newrender[i].views++;
   }
 }
+//calculate conversion rate---------------------------------------------------------------------------->
+function calcConversion() {
+  for (var i = 0; i < allProducts.length; i++) {
+    if (allProducts[i].views === 0) {
+      allProducts[i].views = 0;
+    } else {
+      allProducts[i].percent = allProducts[i].clicks / allProducts[i].views;
+    }
+  }
+}
 // Wipe the window imgs------------------------------------------------------->
 function wipe() {
   while (productPic.firstChild) {
@@ -78,6 +88,7 @@ function handleClick(event) {
   if (totalClicks === 25) {
     productPic.removeEventListener('click', handleClick);
     wipe();
+    calcConversion();
     coolChart();
   } else {
     wipe();
