@@ -1,3 +1,4 @@
+
 body{
     text-align: center;
      }
@@ -30,7 +31,8 @@ body{
       padding: 10px;
       border-radius: 20px;
     }
-  canvas{
-    width: 900px;
-    height: 600px;
-  }
+    canvas{  
+      width: 20%; /*Specify your width*/
+      height: 30%; /*Specify your height*/
+      object-fit: scale-down;
+}
