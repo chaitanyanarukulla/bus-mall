@@ -107,7 +107,7 @@ render();
 productPic.addEventListener('click', handleClick);
 
 
-// making chart and putting it on DOM ------------------------------------------------------------------------------------->
+// making  Views clicked chart and putting it on DOM ------------------------------------------------------------------>
 function coolChart() {
   var chartLabel = [];
   var chartData = [];
@@ -182,6 +182,7 @@ function coolChart() {
     }
   });
 }
+// making  convertion rate chart and putting it on DOM ------------------------------------------------------------------>
 function coolChart2() {
   var chartLabel = [];
   var chartCon = [];
@@ -247,13 +248,12 @@ function coolChart2() {
     },
     options: {
       responsive:false,
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true
-          }
-        }]
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Percent Clicks'
       }
     }
   });
-}
+};
+

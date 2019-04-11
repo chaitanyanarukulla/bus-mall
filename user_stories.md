@@ -1,8 +1,13 @@
-#Marketing research team Building project to get User data to research what products are liked then others. user will be given 20 total images to select from and each will be given 25 tries
+## User stories
+As a part of the marketing research team, I need a tool to accurately collect and chart feedback from potential customers in order to decide which products are most likely to sell.
 
-#focus group The browser will show 3 picture and out of those 3 they can only select one pictures are generated randomly no 3 picture are repeated This process will happen 25 times
+As a developer, I want to make an adaptable program to randomly generate images and react to user clicks because this we want to easily measure customer input and account for adding new items to the store catalogue.
 
-#Deloper problems to solve randomly generate 3 images to show up on browser collect data from users on what they click and how many times they click
+As s developer, I want to display results in chart so reasearchers can gauge the popularty of products
+
+As a user to the site, I want a visually appealing interface that doesn't have too much clutter  and have smooth transitions and easy to navigate
+
+As a developer, I want to store previously selected products so reasearchers can have acess to collative  data of product
 
 ## User secquance 
 You will be shown three products.
